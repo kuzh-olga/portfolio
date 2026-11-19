@@ -1,0 +1,305 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Olga Kuzheleva Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: single column, spec-sheet rows grouped by content type */
+  :root {
+    --bg: #faf9f7;
+    --surface: #ffffff;
+    --fg: #16181d;
+    --muted: #5e636e;
+    --line: #dcd9d4;
+    --accent: #b4460f;
+    --accent-soft: #f6e8e0;
+    --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121316;
+      --surface: #1a1c20;
+      --fg: #eceae6;
+      --muted: #9aa0ab;
+      --line: #2e3137;
+      --accent: #f08a4b;
+      --accent-soft: #2d2018;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121316;
+    --surface: #1a1c20;
+    --fg: #eceae6;
+    --muted: #9aa0ab;
+    --line: #2e3137;
+    --accent: #f08a4b;
+    --accent-soft: #2d2018;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding-block: 56px 72px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+
+  header { border-bottom: 2px solid var(--fg); padding-bottom: 22px; }
+  h1 {
+    font-size: clamp(30px, 6vw, 42px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  .role {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+  }
+  .intro { margin: 0; max-width: 60ch; color: var(--muted); }
+  .intro strong { color: var(--fg); font-weight: 500; }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    margin-top: 22px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .facts span { white-space: nowrap; }
+  .facts b {
+    color: var(--fg);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+  section { margin-top: 44px; }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .count {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .sec-note {
+    color: var(--muted);
+    font-size: 14.5px;
+    margin: 10px 0 18px;
+    max-width: 62ch;
+  }
+
+  ol { list-style: none; margin: 0; padding: 0; }
+  li { border-bottom: 1px solid var(--line); }
+  li:last-child { border-bottom: 0; }
+  a.item {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: inherit;
+  }
+  a.item:hover .title, a.item:focus-visible .title {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a.item:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  .title {
+    font-size: 16.5px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+    text-wrap: balance;
+  }
+  .desc { margin: 0 0 7px; color: var(--muted); font-size: 14.5px; max-width: 64ch; }
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    align-items: center;
+  }
+  .tag {
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 2px 7px;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  .date { font-variant-numeric: tabular-nums; }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--muted);
+  }
+  footer a { color: var(--accent); }
+  .contact {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    margin-top: 8px;
+    color: var(--fg);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Olga Kuzheleva</h1>
+    <p class="role">Content &amp; Social Media Marketing</p>
+    <p class="intro">Writing and video. Most of it for <strong>NSYS Group</strong>, a B2B software and robotics company serving the used and refurbished mobile device industry in 75+ countries, where I ran content and social from September to November 2026 — everything in the first three sections ran under my byline on the company blog. Short-form video is at the bottom: I shoot and edit it myself.</p>
+    <div class="facts">
+      <span><b>11</b> bylined articles</span>
+      <span><b>4</b> written formats</span>
+      <span><b>2</b> video accounts</span>
+      <span>English, B2B</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head">
+      <h2>Operations &amp; industry</h2>
+      <span class="count">3 pieces</span>
+    </div>
+    <p class="sec-note">Long-form pieces for warehouse and refurbishment operators. Each starts from a problem the reader already has and ends at the part of the product that solves it.</p>
+    <ol>
+      <li><a class="item" href="https://nsysgroup.com/blog/why-human-error-creates-inventory-problems/">
+        <p class="title">Why Human Error Creates Inventory Problems in Used Phone Warehouses</p>
+        <p class="desc">Mistyped IMEIs, inconsistent grading and misregistered returns, and what they cost in wrong shipments. Builds the case for barcode tracking and ties it to NSYS Inventory.</p>
+        <p class="meta"><span class="tag">Long-form B2B</span> <span class="date">13 Nov 2026</span> · Warehouse &amp; refurb operators</p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/obvious-things-about-the-used-phone-business/">
+        <p class="title">7 Obvious Things About the Used Phone Business That Beginners Often Overlook</p>
+        <p class="desc">Seven operational traps in the used phone trade, from supplier vetting to data erasure and seasonal demand. The longest piece here at roughly a nine-minute read.</p>
+        <p class="meta"><span class="tag">Long-form B2B</span> <span class="date">2 Nov 2026</span> · New resellers and small refurbishers</p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/how-to-detect-sensor-failures/">
+        <p class="title">How to Detect Sensor Failures in Used Phones</p>
+        <p class="desc">Technical explainer on catching faulty sensors before a device is graded and resold.</p>
+        <p class="meta"><span class="tag">Technical</span> <span class="date">3 Nov 2026</span> · Testing and grading teams</p>
+      </a></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Product &amp; company</h2>
+      <span class="count">2 pieces</span>
+    </div>
+    <p class="sec-note">Release notes and event announcements — the register shifts to short, factual and precise.</p>
+    <ol>
+      <li><a class="item" href="https://nsysgroup.com/blog/nsys-diagnostics-updates-october-2026/">
+        <p class="title">NSYS Diagnostics Update: Expanded MacBook Testing and Improved Reporting</p>
+        <p class="desc">Release notes covering MacBook hardware detection, automated testing, certificate changes and web platform fixes. Written from engineering input for a mixed technical and commercial audience.</p>
+        <p class="meta"><span class="tag">Product update</span> <span class="date">30 Oct 2026</span> · Existing customers</p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/nsys-group-to-attend-circular-summit/">
+        <p class="title">NSYS Group to Attend Circular Summit 2026 in London</p>
+        <p class="desc">Event announcement for the circular economy trade calendar.</p>
+        <p class="meta"><span class="tag">Event / PR</span> <span class="date">4 Nov 2026</span> · Industry and press</p>
+      </a></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Search-led troubleshooting</h2>
+      <span class="count">6 pieces</span>
+    </div>
+    <p class="sec-note">Short guides written against what people actually search when a device fails. Plain language, fault first, fix second — the top of the funnel for a technical product.</p>
+    <ol>
+      <li><a class="item" href="https://nsysgroup.com/blog/why-is-my-phone-stuck-in-sos-mode/">
+        <p class="title">Why Is My Phone Stuck in SOS Mode?</p>
+        <p class="meta"><span class="tag">SEO guide</span> <span class="date">12 Nov 2026</span></p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/why-does-my-phone-say-no-sim-card/">
+        <p class="title">Why Does My Phone Say No SIM Card?</p>
+        <p class="meta"><span class="tag">SEO guide</span> <span class="date">11 Nov 2026</span></p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/how-to-set-up-face-id-on-iphone/">
+        <p class="title">How to Set Up Face ID on iPhone the Right Way</p>
+        <p class="meta"><span class="tag">SEO guide</span> <span class="date">10 Nov 2026</span></p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/what-to-do-if-your-phone-gets-wet/">
+        <p class="title">What to Do If Your Phone Gets Wet (and What to Avoid)</p>
+        <p class="meta"><span class="tag">SEO guide</span> <span class="date">9 Nov 2026</span></p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/how-to-tell-if-your-phone-has-a-virus/">
+        <p class="title">How to Tell If Your Phone Has a Virus: Signs and Fixes</p>
+        <p class="meta"><span class="tag">SEO guide</span> <span class="date">6 Nov 2026</span></p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/fingerprint-sensor-not-working/">
+        <p class="title">Fingerprint Sensor Not Working? Causes and Fixes</p>
+        <p class="meta"><span class="tag">SEO guide</span> <span class="date">2 Nov 2026</span></p>
+      </a></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Short-form video</h2>
+      <span class="count">2 accounts</span>
+    </div>
+    <p class="sec-note">Shot and edited by me — script, footage, cut, captions. Instagram won't preview inside this page, so each link opens the account's reels.</p>
+    <ol>
+      <li><a class="item" href="https://www.instagram.com/nsys_group/reels/">
+        <p class="title">NSYS Group <span style="font-weight:400;color:var(--muted)">· @nsys_group</span></p>
+        <p class="desc">Product explainers, trade show recaps and social clips for a B2B audience — the hard case for short-form, since the subject is diagnostics software rather than something photogenic.</p>
+        <p class="meta"><span class="tag">B2B video</span> 2026</p>
+      </a></li>
+      <li><a class="item" href="https://www.instagram.com/your_lost_toys/reels/">
+        <p class="title">Your Lost Toys <span style="font-weight:400;color:var(--muted)">· @your_lost_toys</span></p>
+        <p class="desc">Six months running the accounts for an independent music act: clips and stories from gigs and rehearsals, cut around the strongest few seconds of a track. Several passed 200k views; the following grew 2.3x.</p>
+        <p class="meta"><span class="tag">Music / social</span> Nov 2025 – May 2026</p>
+      </a></li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Articles published at <a href="https://nsysgroup.com/blog">nsysgroup.com/blog</a> under my byline. Earlier work — brand books, campaign writing, print and design — on request.</p>
+    <p class="contact">aliseholy09@gmail.com</p>
+  </footer>
+</div>
+
+</body></html>
