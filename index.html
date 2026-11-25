@@ -185,6 +185,36 @@
   .stat span { font-size: 12.5px; color: var(--muted); }
   .results-note { font-size: 13.5px; color: var(--muted); margin: 10px 0 0; max-width: 64ch; }
 
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .card { display: block; text-decoration: none; color: inherit; min-width: 0; }
+  .card img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid var(--line);
+  }
+  .cap { font-size: 12.5px; color: var(--muted); margin: 7px 0 0; line-height: 1.45; }
+  .card:hover .cap { color: var(--accent); }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .strip {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 14px 0 10px;
+  }
+  .strip img {
+    height: 240px;
+    width: auto;
+    flex: 0 0 auto;
+    border-radius: 5px;
+    border: 1px solid var(--line);
+  }
+
   footer {
     margin-top: 48px;
     padding-top: 18px;
@@ -212,7 +242,8 @@
     <div class="facts">
       <span><b>20+</b> bylined articles</span>
       <span><b>4</b> written formats</span>
-      <span><b>2</b> video accounts</span>
+      <span><b>7</b> reels</span>
+      <span><b>12</b> static pieces</span>
       <span>English, B2B</span>
     </div>
   </header>
@@ -220,21 +251,98 @@
   <section>
     <div class="sec-head">
       <h2>Short-form video</h2>
-      <span class="count">2 accounts</span>
+      <span class="count">7 reels · 2 accounts</span>
     </div>
-    <p class="sec-note">Shot and edited by me — script, footage, cut, captions. Instagram won't preview inside this page, so each link opens the account's reels.</p>
+    <p class="sec-note">Scripted, shot and edited by me. Instagram won't preview inside this page, so each link opens the reel.</p>
+
+    <h3 style="font-size:15px;margin:22px 0 0;font-weight:600">Your Lost Toys <span style="font-weight:400;color:var(--muted)">· independent music act · Nov 2025 – May 2026</span></h3>
+    <div class="results">
+      <div class="stat"><b>472k</b><span>views, five reels</span></div>
+      <div class="stat"><b>31k</b><span>likes</span></div>
+      <div class="stat"><b>3.5k</b><span>reposts</span></div>
+      <div class="stat"><b>2.3x</b><span>follower growth</span></div>
+      <div class="stat"><b>1</b><span>show sold out</span></div>
+    </div>
     <ol>
-      <li><a class="item" href="https://www.instagram.com/nsys_group/reels/">
-        <p class="title">NSYS Group <span style="font-weight:400;color:var(--muted)">· @nsys_group</span></p>
-        <p class="desc">Product explainers, trade show recaps and social clips for a B2B audience — the hard case for short-form, since the subject is diagnostics software rather than something photogenic.</p>
-        <p class="meta"><span class="tag">B2B video</span> 2026</p>
+      <li><a class="item" href="https://www.instagram.com/reel/DYuqEUYDRZJ/">
+        <p class="title">341k views · 30.2k likes · 3,542 reposts</p>
+        <p class="desc">The account's breakout reel — a like on roughly one view in eleven, and over 10,000 people who either reposted it or sent it to someone. The format it established became the template for everything after.</p>
+        <p class="meta"><span class="tag">Top performer</span> 139 comments · 6,547 sends</p>
       </a></li>
-      <li><a class="item" href="https://www.instagram.com/your_lost_toys/reels/">
-        <p class="title">Your Lost Toys <span style="font-weight:400;color:var(--muted)">· @your_lost_toys</span></p>
-        <p class="desc">Six months running the accounts for an independent music act: clips and stories from gigs and rehearsals, cut around the strongest few seconds of a track. Several passed 200k views; the following grew 2.3x.</p>
-        <p class="meta"><span class="tag">Music / social</span> Nov 2025 – May 2026</p>
+      <li><a class="item" href="https://www.instagram.com/reel/DZMz8_0CJC3/">
+        <p class="title">64.7k views · show announcement</p>
+        <p class="desc">Promo reel for a gig that sold out. Comments and likes stayed modest while sends ran high — people were forwarding it to the friends they wanted to go with, which is exactly what an event post is for.</p>
+        <p class="meta"><span class="tag">Sold out</span> 104 likes · 72 sends</p>
+      </a></li>
+      <li><a class="item" href="https://www.instagram.com/reel/DXg1G2hgnoJ/">
+        <p class="title">27k views · 353 likes</p>
+        <p class="meta"><span class="tag">Reel</span> 11 comments · 8 reposts</p>
+      </a></li>
+      <li><a class="item" href="https://www.instagram.com/reel/DXMQ4fuDmwU/">
+        <p class="title">21.5k views · 325 likes</p>
+        <p class="desc">Live footage from a gig. The strongest comment response of the set at 40.</p>
+        <p class="meta"><span class="tag">Reel</span> 40 comments · 12 reposts</p>
+      </a></li>
+      <li><a class="item" href="https://www.instagram.com/reel/DXX97ihmC8k/">
+        <p class="title">17.7k views · 85 likes</p>
+        <p class="meta"><span class="tag">Reel</span> 5 comments · 2 reposts</p>
       </a></li>
     </ol>
+
+    <h3 style="font-size:15px;margin:26px 0 0;font-weight:600">NSYS Group <span style="font-weight:400;color:var(--muted)">· B2B, device diagnostics software</span></h3>
+    <p class="sec-note" style="margin:8px 0 12px">A trade audience rather than a consumer one — wholesalers and refurbishers, not a public scrolling for entertainment. Reach here is a fraction of a music account's by design; the job is to be understood by the few thousand people who buy this software.</p>
+    <ol>
+      <li><a class="item" href="https://www.instagram.com/reel/De13QG2s-CM/">
+        <p class="title">1.5k views · 23 likes</p>
+        <p class="meta"><span class="tag">B2B video</span> 8 comments · @nsys_group</p>
+      </a></li>
+      <li><a class="item" href="https://www.instagram.com/reel/DfHkGTKMTh-/">
+        <p class="title">1.4k views · 24 likes</p>
+        <p class="meta"><span class="tag">B2B video</span> 11 comments · @nsys_group</p>
+      </a></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Static &amp; carousels</h2>
+      <span class="count">NSYS Group</span>
+    </div>
+    <p class="sec-note">Social graphics for a B2B audience: concept, copy and layout. The brand's black-and-yellow system was already set; my part was deciding what each post had to say and building it out.</p>
+
+    <div class="grid">
+      <a class="card" href="https://www.instagram.com/p/DerTrTRDKoj/">
+        <img src="assets/01_diagnostics.jpg" alt="NSYS Diagnostics product post" loading="lazy">
+        <p class="cap">Product post — the diagnostics suite reduced to two numbers and eight icons.</p>
+      </a>
+      <a class="card" href="https://www.instagram.com/p/DfWsLpbsYpN/">
+        <img src="assets/02_china.jpg" alt="China second-hand smartphone market post" loading="lazy">
+        <p class="cap">Market analysis — China's second-hand trade, opening a trends series.</p>
+      </a>
+      <a class="card" href="https://www.instagram.com/p/DeCYy5NDFHK/">
+        <img src="assets/03_tradein.jpg" alt="Trade-in customer post" loading="lazy">
+        <p class="cap">Single-line hook for retailers: the trade-in customer already in the shop.</p>
+      </a>
+    </div>
+
+    <a class="card wide" href="https://lnkd.in/p/dF9Ycwnj" style="display:block;margin-top:16px">
+      <img src="assets/04_summit.jpg" alt="Circular Summit 2026 event banner" loading="lazy">
+      <p class="cap">LinkedIn event banner — Circular Summit 2026, London. Ran alongside the announcement article I wrote.</p>
+    </a>
+
+    <h3 style="font-size:15px;margin:26px 0 0;font-weight:600">Carousel — Key Aspects of the Used Phone Market <span style="font-weight:400;color:var(--muted)">· 8 slides</span></h3>
+    <p class="sec-note" style="margin:8px 0 0">Built from my own long-form article on the blog: the same research cut down to eight slides, one trap per slide, ending on a contact prompt. One piece of work, two formats, two audiences — people who read and people who swipe.</p>
+    <div class="strip">
+      <img src="assets/c1_cover.jpg" alt="Carousel slide: Cover" loading="lazy">
+      <img src="assets/c2_manual.jpg" alt="Carousel slide: Manual testing" loading="lazy">
+      <img src="assets/c3_suppliers.jpg" alt="Carousel slide: Suppliers" loading="lazy">
+      <img src="assets/c4_inventory.jpg" alt="Carousel slide: Inventory & trust" loading="lazy">
+      <img src="assets/c5_seasonality.jpg" alt="Carousel slide: Seasonality" loading="lazy">
+      <img src="assets/c6_erasure.jpg" alt="Carousel slide: Data erasure" loading="lazy">
+      <img src="assets/c7_networking.jpg" alt="Carousel slide: Networking" loading="lazy">
+      <img src="assets/c8_cta.jpg" alt="Carousel slide: Close" loading="lazy">
+    </div>
+    <p class="cap" style="margin-top:4px"><a href="https://www.instagram.com/p/DfR2HzgjMeG/" style="color:var(--accent)">Open the carousel on Instagram →</a></p>
   </section>
 
   <div class="sec-head" style="margin-top:44px">
