@@ -215,6 +215,40 @@
     border: 1px solid var(--line);
   }
 
+  .case {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .case:last-child { border-bottom: 0; }
+  .case h3 { font-size: 17px; margin: 0 0 3px; letter-spacing: -0.01em; }
+  .case .where {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--muted);
+    margin: 0 0 13px;
+    letter-spacing: 0.02em;
+  }
+  .case dl { margin: 0; }
+  .case .row {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 4px 12px;
+    margin-bottom: 9px;
+  }
+  .case dt {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-top: 3px;
+  }
+  .case dd { margin: 0; font-size: 14.5px; line-height: 1.5; max-width: 62ch; }
+  .case dd b { font-weight: 600; }
+  @media (max-width: 460px) {
+    .case .row { grid-template-columns: 1fr; }
+  }
+
   footer {
     margin-top: 48px;
     padding-top: 18px;
@@ -247,6 +281,43 @@
       <span>English, B2B</span>
     </div>
   </header>
+
+  <section>
+    <div class="sec-head">
+      <h2>Three cases</h2>
+      <span class="count">context, approach, result</span>
+    </div>
+
+    <div class="case">
+      <h3>Giving a B2B software company a voice of its own</h3>
+      <p class="where">NSYS Group · device diagnostics software · Sep – Nov 2026</p>
+      <dl>
+        <div class="row"><dt>Context</dt><dd>The company sold into 75+ countries but sounded like every other vendor in the category. Nothing distinguished its content from a competitor's.</dd></div>
+        <div class="row"><dt>Approach</dt><dd>Analysed the market and the competitors first, then built what was missing: a tone of voice, a refreshed visual style, and a content plan run as a series of tests rather than a schedule to fill. One of those tests was humour — short product explainers played straight into the joke, shot in several languages, for an industry that never does that.</dd></div>
+        <div class="row"><dt>Result</dt><dd><b>20+ articles</b> published, a cadence of <b>20 posts a week</b> held across six platforms, and post views <b>doubled</b> on it. Five tracked articles pulled <b>964 clicks and 179k search impressions</b> at average position <b>7</b> — where a typical piece on this blog draws 10–20 clicks.</dd></div>
+      </dl>
+    </div>
+
+    <div class="case">
+      <h3>Warming an audience for a release, then selling the room out</h3>
+      <p class="where">Your Lost Toys · independent music act · Nov 2025 – May 2026</p>
+      <dl>
+        <div class="row"><dt>Context</dt><dd>One or two posts a week, published whenever. A new single was coming and there was no audience warmed up to meet it.</dd></div>
+        <div class="row"><dt>Approach</dt><dd>Set a rhythm and held it: one reel, three posts and two stories a day. Built most of the reels around the track itself so the song was familiar before release, and cut memes in between to reach people who weren't there for the music. Once the audience was there, turned the same format toward selling tickets.</dd></div>
+        <div class="row"><dt>Result</dt><dd><b>472k views</b> across five reels, the best at <b>341k</b> with 30k likes and 3.5k reposts. Followers grew <b>2.3x</b>, concert attendance by about half, and the show promoted by the announcement reel <b>sold out</b>.</dd></div>
+      </dl>
+    </div>
+
+    <div class="case">
+      <h3>From posting only around events to selling merch</h3>
+      <p class="where">Profbyuro · student union, Orel State University · volunteer · 2021 – 2023</p>
+      <dl>
+        <div class="row"><dt>Context</dt><dd>The page was updated occasionally and only when an event was coming. Between events it went quiet, and there was nothing to sell.</dd></div>
+        <div class="row"><dt>Approach</dt><dd>Led a volunteer team of eight to a steady four posts a week, added reels, and built the organisation's first brand book so the output held together. With an audience that now showed up between events, launched merch — something the union had never sold.</dd></div>
+        <div class="row"><dt>Result</dt><dd>Turnout and engagement <b>doubled</b>, and around <b>15% of followers</b> bought merch at least once. The buyers then wore it at events shared with other organisations, which advertised us without us paying for it.</dd></div>
+      </dl>
+    </div>
+  </section>
 
   <section>
     <div class="sec-head">
@@ -355,7 +426,34 @@
     <div class="stat"><b>7</b><span>average position</span></div>
     <div class="stat"><b>20+</b><span>articles published</span></div>
   </div>
-  <p class="results-note">Google Search Console, five tracked articles, October–November 2026. Most pieces on this blog draw 10–20 clicks; these rank on the first page, between positions 6.4 and 8.</p>
+  <p class="results-note">Figures from Google Search Console, October–November 2026, for the five articles below. Most pieces on this blog draw 10–20 clicks; these rank on the first page, between positions 6.4 and 8. Eleven more are listed further down, out of 20+ published.</p>
+    <p class="results-note" style="margin-top:8px">Each piece ships in <b style="color:var(--fg);font-weight:600">ten languages</b> — English, Spanish, French, German, Chinese, Arabic, Italian, Russian, Portuguese and Japanese. I wrote the English source and coordinated the localised versions with internal reviewers and outside translators, so the terminology and the tone survive the translation. Example: <a href="https://nsysgroup.com/fr/blog/get-to-the-root-of-your-android-issues/" style="color:var(--accent)">the French edition</a> of the article below.</p>
+    <h3 style="font-size:15px;margin:22px 0 0;font-weight:600">Top performers in search <span style="font-weight:400;color:var(--muted)">· the five tracked above</span></h3>
+    <ol>
+      <li><a class="item" href="https://nsysgroup.com/blog/get-to-the-root-of-your-android-issues/">
+        <p class="title">USB Debugging on Android: ADB, Safety, and Device Testing</p>
+        <p class="desc">The strongest piece of the set and the first one I published. A technical subject written so a non-engineer can follow it, which is why it outranks the repair forums.</p>
+        <p class="meta"><span class="tag">473 clicks</span> 88.4k impressions · position 6.4 · 24 Sep 2026</p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/how_to_get_water_out_of_your_phone_camera/">
+        <p class="title">How to Get Water Out of Your Phone Camera Safely</p>
+        <p class="desc">Best click-through rate of the five at 0.8% — the title answers the search exactly as people type it.</p>
+        <p class="meta"><span class="tag">207 clicks</span> 24.6k impressions · position 6.7</p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/phone_battery_swelling/">
+        <p class="title">Phone Battery Swelling: How to Spot the Problem Early</p>
+        <p class="meta"><span class="tag">157 clicks</span> 35.1k impressions · position 6.6 · 13 Oct 2026</p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/iphone-camera-not-working/">
+        <p class="title">iPhone Camera Not Working: Causes, Testing and Fixes</p>
+        <p class="meta"><span class="tag">66 clicks</span> 17.7k impressions · position 8</p>
+      </a></li>
+      <li><a class="item" href="https://nsysgroup.com/blog/phone-microphone-not-working/">
+        <p class="title">Phone Microphone Not Working: Causes, Tests and Fixes</p>
+        <p class="meta"><span class="tag">61 clicks</span> 12.8k impressions · position 7</p>
+      </a></li>
+    </ol>
+
 
   <section>
     <div class="sec-head">
